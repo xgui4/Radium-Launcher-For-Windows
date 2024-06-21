@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Radium_Launcher" GeneratedClassName="Config">
+  <Profiles />
+  <Settings>
+    <Setting Name="OS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Windows</Value>
+    </Setting>
+    <Setting Name="Background" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Asset/bg.png</Value>
+    </Setting>
+    <Setting Name="Custom" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

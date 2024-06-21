@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Radium_Launcher_For_Windows</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\radium.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SignAssembly>False</SignAssembly>
+    <FileVersion>0.0.2</FileVersion>
+    <AssemblyVersion>0.0.2</AssemblyVersion>
+    <NeutralLanguage>fr-CA</NeutralLanguage>
+    <Title>Radium Launcher For Windows</Title>
+    <Version>0.0.2</Version>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Amethyst.webp" />
+    <None Remove="bedrock.png" />
+    <None Remove="bg.png" />
+    <None Remove="Cog.gif" />
+    <None Remove="Cog.webp" />
+    <None Remove="grass_dirt.png" />
+    <None Remove="launch.bat" />
+    <None Remove="mc.lnk" />
+    <None Remove="Minecraft_missing_texture_block.svg.png" />
+    <None Remove="radium.png" />
+    <None Remove="SplashScreen1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\radium.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="launch.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mc.lnk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AnimatedImage.Wpf" Version="1.0.4" />
+    <PackageReference Include="CmlLib.Core" Version="4.0.0-beta.1" />
+    <PackageReference Include="Doxygen" Version="1.8.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+    <PackageReference Include="python" Version="3.13.0-b1" />
+    <PackageReference Include="pythonnet" Version="3.1.0-preview2024-05-07" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Amethyst.webp" />
+    <Resource Include="Assets\bedrock.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cog.gif" />
+    <Resource Include="Assets\Cog.webp" />
+    <Resource Include="Assets\grass_dirt.png" />
+    <Resource Include="Assets\radium.png" />
+    <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Assets\SplashScreen1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </SplashScreen>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Backend\connect.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>connect.py</DependentUpon>
+    </Compile>
+    <Compile Update="Config.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Config.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Backend\connect.py">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>connect.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Config.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Config.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
