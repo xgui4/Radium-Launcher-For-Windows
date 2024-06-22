@@ -20,7 +20,7 @@ namespace Radium_Launcher
         {
             try
             {
-                var processInfo = new ProcessStartInfo("launch.bat");
+                var processInfo = new ProcessStartInfo("Scripts/launch.bat");
 
                 var process = Process.Start(processInfo);
 

@@ -18,12 +18,12 @@
                 <ImageBrush ImageSource="Assets/bedrock.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_Copy1" Content="Voir site du lanceur&#xD;&#xA;" HorizontalAlignment="Left" Margin="235,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Copy1_Click">
+        <Button x:Name="Go_To_Website" Content="Voir site du lanceur&#xD;&#xA;" HorizontalAlignment="Left" Margin="235,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Website_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/radium.ico"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_Copy2" Content="Voir le GitHub du projet" HorizontalAlignment="Left" Margin="235,217,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="10" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Copy2_Click">
+        <Button x:Name="Go_To_Source_Code" Content="Voir le GitHub du projet" HorizontalAlignment="Left" Margin="235,217,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="10" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Source_Code_Click">
             <Button.Background>
                 <ImageBrush ImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/800px-Git_icon.svg.png"/>
             </Button.Background>
@@ -33,16 +33,16 @@
                 <ImageBrush ImageSource="Assets/grass_dirt.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_Copy5" Content="Config;" HorizontalAlignment="Left" Margin="428,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Copy5_Click">
+        <Button x:Name="Go_To_Config" Content="Config;" HorizontalAlignment="Left" Margin="428,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Config_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/Cog.gif"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_Copy6" Content="Coming soon&#xD;&#xA;" HorizontalAlignment="Left" Margin="428,217,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Copy6_Click">
+        <Button x:Name="TBD" Content="Coming soon&#xD;&#xA;" HorizontalAlignment="Left" Margin="428,217,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="TBD_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Assets/Minecraft_missing_texture_block.svg.png"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="607,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" Width="183" FontSize="18" FontFamily="Segoe UI Variable Text"><Run Text="Disclaimer : Ce lanceur Minecraft ne permet "/><Run Text=" pas"/><Run Language="fr-ca" Text=" "/><Run Text="de jouer illégalment à Minecraft (gratruitement) et demande d'avoir acheter le jeux sur PC.  Vous devez aussi avoir un lanceur Minecraft installer sur votre système pour le moment."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="607,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" Width="183" FontSize="18" FontFamily="Segoe UI Variable Text"><Run Text="Disclaimer : Ce lanceur Minecraft ne permet "/><Run Text=" pas"/><Run Language="fr-ca" Text=" "/><Run Text="de jouer illégalement à Minecraft (gratruitement) et demande d'avoir acheter le jeux sur PC.  Vous devez aussi avoir un lanceur Minecraft installer sur votre système pour le moment."/></TextBlock>
     </Grid>
 </Window>

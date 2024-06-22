@@ -73,52 +73,6 @@ namespace Radium_Launcher
             var process = Process.Start("explorer", this.url);
             process.WaitForExit(); 
         }
-        
-        /// <summary>
-        /// Cette méthode permet de lancer un script python 
-        /// </summary>
-        public void LaunchPython()
-        {
-            var startInfo = new ProcessStartInfo();
-            startInfo.FileName = PYTHON_PATH; 
-            startInfo.Arguments = path; 
-
-            Process.Start(startInfo);
-        }
-
-        /// <summary>
-        /// Cette méthode permet de lancer un script python tout en retournant un output
-        /// </summary>
-        public string LaunchPythonOutput()
-        {
-            string output = "N/A";
-
-            using (Process process = new Process())
-            {
-                process.StartInfo.FileName = PYTHON_PATH; // This should be the path to the Python interpreter
-                process.StartInfo.Arguments = path; // This should be the path to your Python script
-                process.StartInfo.RedirectStandardOutput = true;
-                process.StartInfo.RedirectStandardError = true;
-                process.Start();
-
-                StreamReader reader = process.StandardOutput;
-                StreamReader errorReader = process.StandardError;
-
-                output = reader.ReadToEnd();
-
-                string error = errorReader.ReadToEnd(); // Read any errors
-
-                process.WaitForExit();
-
-                if (!string.IsNullOrEmpty(error))
-                {
-                    MessageBox.Show("Error: " + error);
-                }
-
-                MessageBox.Show(output);
-            }
-            return output;
-        }
 
     }
 }
