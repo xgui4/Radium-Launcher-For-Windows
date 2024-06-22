@@ -28,19 +28,19 @@ namespace Radium_Launcher
             InitializeComponent();
         }
 
-        private void downloadMinecraft_Copy1_Click(object sender, RoutedEventArgs e)
+        private void Go_To_Website_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Le site est prévue pour plus tard.");
         }
-
-        private void downloadMinecraft_Copy2_Click(object sender, RoutedEventArgs e)
+        
+        private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)
         {
             sys = new SystemManagement();
 
             sys.OpenBrowser("https://github.com/xgui4/Radium-Launcher");
         }
 
-        private void downloadMinecraft_Copy6_Click(object sender, RoutedEventArgs e)
+        private void TBD_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("this is a future feature");
         }
@@ -51,7 +51,7 @@ namespace Radium_Launcher
             sys.OpenBrowser("https://www.minecraft.net/download"); 
         }
 
-        private void downloadMinecraft_Copy5_Click(object sender, RoutedEventArgs e)
+        private void Go_To_Config_Click(object sender, RoutedEventArgs e)
         {
             //File.Open("App.Config", FileMode.Open, FileAccess.Write, FileShare.None);
             MessageBox.Show("this is a future feature");
