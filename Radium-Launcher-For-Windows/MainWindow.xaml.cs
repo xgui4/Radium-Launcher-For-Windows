@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Radium_Launcher_For_Windows;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 using MessageBox = System.Windows.MessageBox;
@@ -75,7 +76,13 @@ namespace Radium_Launcher
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
+            MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AboutBox about = new AboutBox();
+            about.Show();
         }
     }
 }       

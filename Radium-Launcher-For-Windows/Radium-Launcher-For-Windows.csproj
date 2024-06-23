@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <RootNamespace>Radium_Launcher_For_Windows</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -13,18 +13,28 @@
     <FileVersion>0.0.11</FileVersion>
     <AssemblyVersion>0.0.1</AssemblyVersion>
     <NeutralLanguage>fr-CA</NeutralLanguage>
-    <Title>Radium Launcher For Windows</Title>
+    <Title>Radium Launcher : Windows Edition</Title>
     <Version>0.0.1</Version>
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Amethyst.webp" />
+    <None Remove="Apps.png" />
     <None Remove="bedrock.png" />
     <None Remove="bg.png" />
     <None Remove="Cog.gif" />
     <None Remove="Cog.webp" />
     <None Remove="grass_dirt.png" />
+    <None Remove="Info.png" />
     <None Remove="launch.bat" />
     <None Remove="mc.lnk" />
     <None Remove="Minecraft_missing_texture_block.svg.png" />
@@ -33,6 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Apps.png" />
     <Resource Include="Assets\radium.ico" />
   </ItemGroup>
 
@@ -71,6 +82,7 @@
     <Resource Include="Assets\grass_dirt.png" />
     <Resource Include="Assets\radium.png" />
     <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
+    <Resource Include="Info.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,6 +104,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>connect.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Windows\" />
   </ItemGroup>
 
 </Project>
