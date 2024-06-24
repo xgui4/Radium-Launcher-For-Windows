@@ -1,12 +1,18 @@
-﻿<Window x:Class="Radium_Launcher_For_Windows.AboutBox"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Radium_Launcher_For_Windows"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="Radium_Launcher_For_Windows.AboutBox"
         mc:Ignorable="d"
-        Title="AboutBox" Height="450" Width="800">
+        Title="AboutBox" Height="450" Width="600">
     <Grid>
-        
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/radium.ico"/>
+        <Label Content="Radium Launcher" HorizontalAlignment="Left" Margin="115,23,0,0" VerticalAlignment="Top" FontSize="48"/>
+        <Label Content="For Windows" HorizontalAlignment="Left" Margin="115,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.074,-0.376"/>
+        <TextBlock HorizontalAlignment="Center" Height="66" Margin="0,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="574"><Run Text="Disclaimer : Ce lanceur"/><Run Text=" "/><Run Text="Minecraft ne permet"/><Run Text=" "/><Run Text="pas de jouer"/><Run Text=" "/><Run Text="illégalement à"/><Run Text=" "/><Run Text="Minecraft"/><Run Text=" "/><Run Text="(gratruitement) et"/><LineBreak/><Run Text="demande d'avoir"/><Run Text=" "/><Run Text="acheter le jeux sur PC."/><Run Text=" "/><Run Text="Vous devez aussi avoir"/><Run Text=" "/><Run Text="un lanceur Minecraft"/><Run Text=" "/><Run Text="installer sur votre"/><LineBreak/><Run Text="système pour le"/><Run Text=" "/><Run Text="momen"/><Run Language="fr-ca" Text="t"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="285" Margin="10,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="577"><Run Text="MIT License"/><LineBreak/><Run Text="Copyright (c) 2024 Xgui4 Studio "/><LineBreak/><Run Text="Permission is hereby granted, free of charge, to any person obtaining a copy"/><Run Text=" "/><Run Text="of this software and associated documentation files (the &quot;Software&quot;), to deal"/><Run Text=" "/><Run Text="in the Software without restriction, including without limitation the rights"/><Run Text=" "/><Run Text="to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"/><Run Text=" "/><Run Text="copies of the Software, and to permit persons to whom the Software is"/><Run Text=" "/><Run Text="furnished to do so, subject to the following conditions:"/><Run Text=" "/><Run Text="The above copyright notice and this permission notice shall be included in all"/><Run Text=" "/><Run Text="copies or substantial portions of the Software."/><Run Text=" "/><Run Text="THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"/><LineBreak/><Run Text="IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,"/><Run Text=" "/><Run Text="FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE"/><Run Text=" "/><Run Text="AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"/><Run Text=" "/><Run Text="LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,"/><Run Language="fr-ca" Text=" "/><Run Text="OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE"/><Run Language="fr-ca" Text=" "/><Run Text="SOFTWARE."/></TextBlock>
+
     </Grid>
 </Window>

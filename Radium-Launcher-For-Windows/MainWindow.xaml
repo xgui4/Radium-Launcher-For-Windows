@@ -42,16 +42,16 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Image Grid.Column="5" HorizontalAlignment="Left" Height="105" Margin="253,71,0,0" VerticalAlignment="Top" Width="96" MouseLeftButtonDown="openSetting" Source="/Apps.png">
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="105" Margin="253,71,0,0" VerticalAlignment="Top" Width="96" MouseLeftButtonDown="openSetting" Source="Assets/Apps.png">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/Apps.png"/>
+                <ImageBrush ImageSource="Assets/Apps.png"/>
             </Image.OpacityMask>
         </Image>
         <TextBlock Grid.Column="5" Foreground="white"  HorizontalAlignment="Left" Margin="292,176,0,0" TextWrapping="Wrap" Text="Apps" VerticalAlignment="Top" RenderTransformOrigin="0.9,0.284" Height="21"/>
         <Button Grid.Column="5" Content="Se connecter" HorizontalAlignment="Left" Margin="196,392,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Grid.Column="5" Content="About" HorizontalAlignment="Left" Height="117" Margin="242,223,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1">
             <Button.OpacityMask>
-                <ImageBrush ImageSource="/Info.png"/>
+                <ImageBrush ImageSource="Assets/Info.png"/>
             </Button.OpacityMask>
         </Button>
     </Grid>

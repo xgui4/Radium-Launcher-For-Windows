@@ -70,7 +70,7 @@ namespace Radium_Launcher
 
         private void openSetting(object sender, MouseButtonEventArgs e)
         {
-            Setting settingWindow = new Setting();
+            Apps settingWindow = new Apps();
             settingWindow.Show();
         }
 

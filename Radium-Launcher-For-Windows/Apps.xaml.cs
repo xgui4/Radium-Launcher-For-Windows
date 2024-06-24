@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Radium_Launcher_For_Windows;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -18,19 +19,20 @@ using MessageBox = System.Windows.MessageBox;
 namespace Radium_Launcher
 {
     /// <summary>
-    /// Le code behind qui fait fonctionner la page Setting. 
+    /// Le code behind qui fait fonctionner la page Apps. 
     /// </summary>
-    public partial class Setting : Window
+    public partial class Apps : Window
     {
         SystemManagement sys;
-        public Setting()
+        public Apps()
         {
             InitializeComponent();
         }
 
         private void Go_To_Website_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Le site est prévue pour plus tard.");
+            Website website = new Website();
+            website.Show(); 
         }
         
         private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)

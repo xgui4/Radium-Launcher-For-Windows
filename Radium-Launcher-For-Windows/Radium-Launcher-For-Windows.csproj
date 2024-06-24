@@ -10,7 +10,7 @@
     <ApplicationIcon>Assets\radium.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <SignAssembly>False</SignAssembly>
-    <FileVersion>0.0.11</FileVersion>
+    <FileVersion>0.0.0.1</FileVersion>
     <AssemblyVersion>0.0.1</AssemblyVersion>
     <NeutralLanguage>fr-CA</NeutralLanguage>
     <Title>Radium Launcher : Windows Edition</Title>
@@ -29,6 +29,8 @@
   <ItemGroup>
     <None Remove="Amethyst.webp" />
     <None Remove="Apps.png" />
+    <None Remove="Assets\Apps.png" />
+    <None Remove="Assets\Info.png" />
     <None Remove="bedrock.png" />
     <None Remove="bg.png" />
     <None Remove="Cog.gif" />
@@ -43,7 +45,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Apps.png" />
+    <Resource Include="Assets\Apps.png" />
+    <Resource Include="Assets\Info.png" />
     <Resource Include="Assets\radium.ico" />
   </ItemGroup>
 
@@ -63,6 +66,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
     <PackageReference Include="Npgsql" Version="8.0.3" />
     <PackageReference Include="python" Version="3.13.0-b1" />
     <PackageReference Include="pythonnet" Version="3.1.0-preview2024-05-07" /> 
@@ -82,7 +86,6 @@
     <Resource Include="Assets\grass_dirt.png" />
     <Resource Include="Assets\radium.png" />
     <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
-    <Resource Include="Info.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -104,10 +107,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>connect.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Windows\" />
   </ItemGroup>
 
 </Project>

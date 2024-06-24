@@ -15,17 +15,13 @@ using System.Windows.Shapes;
 namespace Radium_Launcher_For_Windows
 {
     /// <summary>
-    /// Interaction logic for AboutBox.xaml
+    /// Interaction logic for Website.xaml
     /// </summary>
-    public partial class AboutBox : Window
+    public partial class Website : Window
     {
-        public AboutBox()
+        public Website()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
         }
     }
 }
