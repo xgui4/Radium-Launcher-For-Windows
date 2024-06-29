@@ -6,10 +6,21 @@
         xmlns:local="clr-namespace:Radium_Launcher_For_Windows"
         xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="Radium_Launcher_For_Windows.Website"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Radium Launcher Website" Height="450" Width="800">
     <Grid Margin="0,0,-20,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="502*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="203*"/>
+        </Grid.ColumnDefinitions>
 
-        <Wpf:WebView2 x:Name="Website1" Source="https://xgui4.github.io/Radium.Launcher/" AutomationProperties.Name="Website" DefaultBackgroundColor="White" SnapsToDevicePixels="True" Margin="0,0,0,0"/>
+        <Wpf:WebView2 x:Name="Website1" Source="https://xgui4.github.io/Radium.Launcher/" AutomationProperties.Name="Website" DefaultBackgroundColor="White" SnapsToDevicePixels="True" Grid.ColumnSpan="9"/>
 
     </Grid>
 </Window>

@@ -8,6 +8,9 @@
         mc:Ignorable="d"
         Title="Radium Launcher : Windows Edition" Height="450" Width="800" Icon="/Assets/radium.ico">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Capture d’écran 2024-06-28 233424.png"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="56*"/>
@@ -20,11 +23,8 @@
             <ColumnDefinition Width="109*"/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="bg" Source="Assets/bg.png" Stretch="Fill" Grid.ColumnSpan="9"/>
-        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Center" Height="100" Margin="0,66,0,0" VerticalAlignment="Top" Width="100" Source="Assets/grass_dirt.png" MouseLeftButtonDown="mcLauncherSelected" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="4">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="Assets/grass_dirt.png"/>
-            </Image.OpacityMask>
+        <Image x:Name="bg" Source="/Capture d’écran 2024-06-28 233921.png" Stretch="Fill" Grid.ColumnSpan="9"/>
+        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Left" Height="100" Margin="41,67,0,0" VerticalAlignment="Top" Width="100" Source="\Assets\Capture d’écran 2024-06-28 233424.png" MouseLeftButtonDown="mcLauncherSelected" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="4">
         </Image>
         <Image HorizontalAlignment="Left" Height="100" Margin="79,66,0,0" VerticalAlignment="Top" Width="100" Source="Assets/bedrock.png" Cursor="Hand" MouseLeftButtonDown="mcBedrockSelected" Grid.Column="5"/>
         <Label Content="Microsoft Launcher&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1" Grid.ColumnSpan="5"/>
@@ -49,7 +49,10 @@
         </Image>
         <TextBlock Grid.Column="5" Foreground="white"  HorizontalAlignment="Left" Margin="292,176,0,0" TextWrapping="Wrap" Text="Apps" VerticalAlignment="Top" RenderTransformOrigin="0.9,0.284" Height="21"/>
         <Button Grid.Column="5" Content="Se connecter" HorizontalAlignment="Left" Margin="196,392,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Grid.Column="5" Content="About" HorizontalAlignment="Left" Height="117" Margin="242,223,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1">
+        <Button Grid.Column="5" Content="" HorizontalAlignment="Left" Height="117" Margin="242,223,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/Info.png"/>
+            </Button.Background>
             <Button.OpacityMask>
                 <ImageBrush ImageSource="Assets/Info.png"/>
             </Button.OpacityMask>

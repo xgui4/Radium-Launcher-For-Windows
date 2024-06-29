@@ -33,6 +33,8 @@
     <None Remove="Assets\Info.png" />
     <None Remove="bedrock.png" />
     <None Remove="bg.png" />
+    <None Remove="Capture d’écran 2024-06-28 233424.png" />
+    <None Remove="Capture d’écran 2024-06-28 233921.png" />
     <None Remove="Cog.gif" />
     <None Remove="Cog.webp" />
     <None Remove="grass_dirt.png" />
@@ -86,6 +88,8 @@
     <Resource Include="Assets\grass_dirt.png" />
     <Resource Include="Assets\radium.png" />
     <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
+    <Resource Include="Assets\Capture d’écran 2024-06-28 233424.png" />
+    <Resource Include="Capture d’écran 2024-06-28 233921.png" />
   </ItemGroup>
 
   <ItemGroup>
