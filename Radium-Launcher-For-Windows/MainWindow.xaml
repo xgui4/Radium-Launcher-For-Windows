@@ -7,10 +7,7 @@
         xmlns:local="clr-namespace:Radium_Launcher"
         mc:Ignorable="d"
         Title="Radium Launcher : Windows Edition" Height="450" Width="800" Icon="/Assets/radium.ico">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Capture d’écran 2024-06-28 233424.png"/>
-        </Grid.Background>
+    <Grid Background="#FF1E1E1E">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="56*"/>
@@ -22,17 +19,15 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="109*"/>
         </Grid.ColumnDefinitions>
-
-        <Image x:Name="bg" Source="/Capture d’écran 2024-06-28 233921.png" Stretch="Fill" Grid.ColumnSpan="9"/>
-        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Left" Height="100" Margin="41,67,0,0" VerticalAlignment="Top" Width="100" Source="\Assets\Capture d’écran 2024-06-28 233424.png" MouseLeftButtonDown="mcLauncherSelected" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="4">
+        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Center" Height="100" Margin="0,156,0,0" VerticalAlignment="Top" Width="100" Source="\Assets\Capture d’écran 2024-06-28 233424.png" MouseLeftButtonDown="mcLauncherSelected" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="4">
         </Image>
-        <Image HorizontalAlignment="Left" Height="100" Margin="79,66,0,0" VerticalAlignment="Top" Width="100" Source="Assets/bedrock.png" Cursor="Hand" MouseLeftButtonDown="mcBedrockSelected" Grid.Column="5"/>
-        <Label Content="Microsoft Launcher&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1" Grid.ColumnSpan="5"/>
-        <Label Content="Launch Bedrock Launcher" HorizontalAlignment="Left" Margin="56,179,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="41,222,0,0" VerticalAlignment="Top" Width="100" Source="Assets/Amethyst.webp" Grid.Column="1" MouseLeftButtonDown="launchAmethyst" RenderTransformOrigin="-0.009,0.494" Grid.ColumnSpan="4"/>
-        <Label Content="Amethyst Launcher" HorizontalAlignment="Left" Margin="41,327,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="1" Grid.ColumnSpan="4"/>
-        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="79,222,0,0" VerticalAlignment="Top" Width="100" Source="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/a49f8e1b-3835-4ea1-a85b-118c6425ebc3/Modrinth_Dark_Logo.png" MouseLeftButtonDown="launchModrinth"/>
-        <Label Grid.Column="5" Content="Modrinth" HorizontalAlignment="Left" Margin="103,329,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <Image HorizontalAlignment="Left" Height="100" Margin="259,143,0,0" VerticalAlignment="Top" Width="100" Source="https://static.wikia.nocookie.net/minecraft_fr_gamepedia/images/e/ee/Bedrock.png/revision/latest?cb=20191102112159" Cursor="Hand" MouseLeftButtonDown="mcBedrockSelected" Grid.Column="5" Stretch="Fill"/>
+        <Label Content="Official Launcher" HorizontalAlignment="Left" Margin="13,248,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Label Content="Launch Bedrock Launcher" HorizontalAlignment="Left" Margin="236,248,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="440,143,0,0" VerticalAlignment="Top" Width="100" Source="Assets/Amethyst.webp" Grid.Column="5" MouseLeftButtonDown="launchAmethyst" RenderTransformOrigin="-0.009,0.494" Grid.ColumnSpan="4"/>
+        <Label Content="Amethyst Launcher" HorizontalAlignment="Left" Margin="428,248,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5" Grid.ColumnSpan="4"/>
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="63,150,0,0" VerticalAlignment="Top" Width="100" Source="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/a49f8e1b-3835-4ea1-a85b-118c6425ebc3/Modrinth_Dark_Logo.png" MouseLeftButtonDown="launchModrinth"/>
+        <Label Grid.Column="5" Content="Modrinth" HorizontalAlignment="Left" Margin="78,244,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.5,0.5" Foreground="White">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,14 +37,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Image Grid.Column="5" HorizontalAlignment="Left" Height="105" Margin="253,71,0,0" VerticalAlignment="Top" Width="96" MouseLeftButtonDown="openSetting" Source="Assets/Apps.png">
+        <Image Grid.Column="7" HorizontalAlignment="Left" Height="55" Margin="16,10,0,0" VerticalAlignment="Top" Width="68" MouseLeftButtonDown="openSetting" Source="Assets/Apps.png" Grid.ColumnSpan="2" RenderTransformOrigin="0.306,0.466">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Assets/Apps.png"/>
             </Image.OpacityMask>
         </Image>
-        <TextBlock Grid.Column="5" Foreground="white"  HorizontalAlignment="Left" Margin="292,176,0,0" TextWrapping="Wrap" Text="Apps" VerticalAlignment="Top" RenderTransformOrigin="0.9,0.284" Height="21"/>
-        <Button Grid.Column="5" Content="Se connecter" HorizontalAlignment="Left" Margin="196,392,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Grid.Column="5" Content="" HorizontalAlignment="Left" Height="117" Margin="242,223,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_1">
+        <Button Grid.Column="8" Content="Se connecter" HorizontalAlignment="Left" Margin="37,28,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Grid.Column="5" Content="" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="68" Click="Button_Click_1" Margin="445,14,0,0" Grid.ColumnSpan="3">
             <Button.Background>
                 <ImageBrush ImageSource="/Assets/Info.png"/>
             </Button.Background>

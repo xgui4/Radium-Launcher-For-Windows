@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Radium_Launcher"
         mc:Ignorable="d"
         Title="Radium Launcher : Windows Edition" Height="450" Width="800">
-    <Grid>
-        <Image HorizontalAlignment="Center" Height="424" VerticalAlignment="Center" Width="800" Source="Assets/bg.png" Stretch="Fill" OpacityMask="Black"/>
+    <Grid Background="#FF1E1E1E">
+        <Image HorizontalAlignment="Center" Height="424" VerticalAlignment="Center" Width="800" OpacityMask="#FF1E1E1E"/>
         <Button x:Name="downloadMinecraft" Content="Acheter Minecraft" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/grass_dirt.png"/>
@@ -28,15 +28,16 @@
                 <ImageBrush ImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/800px-Git_icon.svg.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_Copy3" Content="Acheter Minecraft" HorizontalAlignment="Left" Margin="428,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD">
+        <Button x:Name="Go_To_Config" Content="" HorizontalAlignment="Left" Margin="428,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="Hand" Click="Go_To_Config_Click">
             <Button.Background>
-                <ImageBrush ImageSource="Assets/grass_dirt.png"/>
+                <ImageBrush ImageSource="/Assets/Cog.gif"/>
             </Button.Background>
-        </Button>
-        <Button x:Name="Go_To_Config" Content="Config;" HorizontalAlignment="Left" Margin="428,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Config_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Assets/Cog.gif"/>
-            </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/Assets/Cog.gif"/>
+            </Button.OpacityMask>
+            <Button.Foreground>
+                <ImageBrush ImageSource="/Assets/Cog.gif"/>
+            </Button.Foreground>
         </Button>
         <Button x:Name="TBD" Content="Coming soon&#xD;&#xA;" HorizontalAlignment="Left" Margin="428,217,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="TBD_Click">
             <Button.Background>
