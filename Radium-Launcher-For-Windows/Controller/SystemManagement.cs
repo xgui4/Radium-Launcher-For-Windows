@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Radium_Launcher
+namespace Radium_Launcher_For_Windows.Controller
 {
     class SystemManagement
     {
@@ -20,12 +20,12 @@ namespace Radium_Launcher
         {
             windowsVersion = Environment.OSVersion.ToString();
             dotnetVersion = Environment.Version.ToString();
-            defaultBrowser = this.GetDefaultBrowser();
+            defaultBrowser = GetDefaultBrowser();
         }
 
         public bool isItAElevatedProcess()
         {
-            bool isElevatedProcess = Environment.IsPrivilegedProcess; 
+            bool isElevatedProcess = Environment.IsPrivilegedProcess;
             return isElevatedProcess;
         }
 

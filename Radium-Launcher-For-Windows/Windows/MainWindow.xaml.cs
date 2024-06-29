@@ -1,4 +1,5 @@
 ﻿using Radium_Launcher_For_Windows;
+using Radium_Launcher_For_Windows.Controller;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
