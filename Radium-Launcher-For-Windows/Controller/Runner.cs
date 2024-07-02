@@ -11,14 +11,14 @@ using System.Windows;
 
 namespace Radium_Launcher_For_Windows.Controller
 {
-    public class Launcher
+    public class Runner
     {
         private readonly string path;
-        private readonly string appTitle;
-        public Launcher(string path, string appTitle = "")
+        private readonly string name;
+        public Runner(string path, string name = "")
         {
             this.path = path;
-            this.appTitle = appTitle;
+            this.name = name;
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Radium_Launcher_For_Windows.Controller
             }
             catch
             {
-                MessageBox.Show($"Radium Launcher n'a pas pu executer le fichier {appTitle}", "Une erreur inattendu c'est produite");
+                MessageBox.Show($"Radium Runner n'a pas pu executer le fichier {name}", "Une erreur inattendu c'est produite");
             }
         }
 
@@ -43,8 +43,7 @@ namespace Radium_Launcher_For_Windows.Controller
         /// <exception cref="UnauthorizedAccessException"></exception>
         public void LaunchWithElevatedPrivileged()
         {
-            SystemManagement sys = new SystemManagement();
-            if (sys.isItAElevatedProcess())
+            if (IsItAElevatedProcess())
             {
                 try
                 {
@@ -53,9 +52,9 @@ namespace Radium_Launcher_For_Windows.Controller
                 }
                 catch
                 {
-                    MessageBox.Show($"Radium Launcher n'a pu executer le fichier " +
-                        $"{appTitle}. Avez-vous ouvert l'applis en mode administrateur?",
-                        $"Une erreur c'est produite lors de l'éxecution de {appTitle}");
+                    MessageBox.Show($"Radium Runner n'a pu executer le fichier " +
+                        $"{name}. Avez-vous ouvert l'applis en mode administrateur?",
+                        $"Une erreur c'est produite lors de l'éxecution de {name}");
                 }
             }
 
@@ -64,16 +63,22 @@ namespace Radium_Launcher_For_Windows.Controller
                 MessageBox.Show("L'application doit redémarrer avec des privilèges élevés pour effectuer cette action. Veuillez réessayer.");
             }
         }
+        private static bool IsItAElevatedProcess()
+        {
+            bool isElevatedProcess = Environment.IsPrivilegedProcess;
+            return isElevatedProcess;
+        }
 
         /// <summary>
         /// Cette méthode permet d'ouvrir une page web vers le navigateur par défaut.
-        /// <example>  <br></br> Exemple: (constructeur omis pour simplifier) <code> sys.OpenBrowser("<see cref="https://www.microsoft.com"/>") </code> </example> 
         /// </summary>
         public void OpenBrowser()
         {
             var process = Process.Start("explorer", path);
             process.WaitForExit();
         }
+
+
 
     }
 }

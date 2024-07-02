@@ -24,10 +24,10 @@ namespace Radium_Launcher
     /// </summary>
     public partial class Apps : Window
     {
-        SystemManagement sys;
         public Apps()
         {
             InitializeComponent();
+
         }
 
         private void Go_To_Website_Click(object sender, RoutedEventArgs e)
@@ -38,9 +38,9 @@ namespace Radium_Launcher
         
         private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)
         {
-            sys = new SystemManagement();
+            var launcher = new Runner("https://github.com/xgui4/Radium-Runner");
 
-            sys.OpenBrowser("https://github.com/xgui4/Radium-Launcher");
+            launcher.OpenBrowser();
         }
 
         private void TBD_Click(object sender, RoutedEventArgs e)
@@ -49,9 +49,9 @@ namespace Radium_Launcher
         }
         private void downloadMinecraft_launcher_Click(object sender, RoutedEventArgs e)
         {
-            sys = new SystemManagement();
+            var launcher = new Runner("https://www.minecraft.net/download");
 
-            sys.OpenBrowser("https://www.minecraft.net/download"); 
+            launcher.OpenBrowser(); 
         }
 
         private void Go_To_Config_Click(object sender, RoutedEventArgs e)
@@ -62,9 +62,9 @@ namespace Radium_Launcher
 
         private void downloadMinecraft_Click(object sender, RoutedEventArgs e)
         {
-            sys = new SystemManagement();
+            var launcher = new Runner("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
 
-            sys.OpenBrowser("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc"); 
+            launcher.OpenBrowser(); 
         }
     }
 }

@@ -1,10 +1,26 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
-
+    
+    <!-- Variable Gloabale -->
     <sys:String x:Key="Version">Version 0.0.0.2</sys:String>
     <sys:String x:Key="Name">Radium Launcher : Windows Edition</sys:String>
     <sys:String x:Key="Creator">Xgui4 Studio</sys:String>
+    <sys:String x:Key="Release Type">Dev</sys:String>
+    <sys:Boolean x:Key="Is Dev Version">True</sys:Boolean>
+    
+    <!-- Variable de langue variée -->
+    <sys:String x:Key="Config">Configuration</sys:String>
+    <sys:String x:Key="Login">Se connecter</sys:String>
+    <sys:String x:Key="Logout">Se déconnecter</sys:String>
+    <sys:String x:Key="Website">Site Web</sys:String>
+    <sys:String x:Key="Go to Github">Aller vers le repo Github du projet</sys:String>
+    <sys:String x:Key="Buy Minecraft">Acheter Minecraft</sys:String>
+    <sys:String x:Key="Download Minecraft Launcher">Télécharger le launcher Minecraft</sys:String>
+    <sys:String x:Key="Coming Soon">À venir</sys:String>
+    <sys:String x:Key="StartUp Message">Vous éxécuter une version de developpment. Ces versions ne sont pas donnée en fichier exe 
+        et peuvent et pas être complète et peut être instable</sys:String>
+    <sys:String x:Key="Login Not Availaible Message">La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant</sys:String>
 
     <sys:String x:Key="Disclaimer">Disclaimer : Ce lanceur Minecraft ne permet pas de jouer illégalement à Minecraft (gratruitement) et
     demande d'avoir acheter le jeux sur PC. Vous devez aussi avoir un lanceur Minecraft installer sur votre système pour le moment.</sys:String>

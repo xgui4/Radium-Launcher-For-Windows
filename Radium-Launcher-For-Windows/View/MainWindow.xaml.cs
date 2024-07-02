@@ -15,9 +15,7 @@ namespace Radium_Launcher
         public MainWindow()
         {
             InitializeComponent();
-            SystemManagement sys;
-            string version = (string)this.FindResource("Version");
-            Console.WriteLine(version);
+            string comingSoon = (string)this.FindResource("Coming Soon");
         }
 
         private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)
@@ -34,14 +32,14 @@ namespace Radium_Launcher
             }
             catch
             {
-                MessageBox.Show("Radium Launcher n'a pas pu executer le fichier launch.bat", "Une erreur inentendu c'est produite");
+                MessageBox.Show("Radium Runner n'a pas pu executer le fichier launch.bat", "Une erreur inentendu c'est produite");
             }
 
         }
 
         private void LaunchBedrockLauncher_Selected(object sender, MouseButtonEventArgs e)
         {
-            var launcher = new Launcher("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\"", "Bedrock Launcher");
+            var launcher = new Runner("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\"", "Bedrock Runner");
             launcher.LaunchWithElevatedPrivileged();
         }
 
@@ -49,12 +47,12 @@ namespace Radium_Launcher
         {
             try
             {
-                var process = Process.Start("C:\\Program Files\\Amethyst Launcher\\Amethyst Launcher.exe");
+                var process = Process.Start("C:\\Program Files\\Amethyst Runner\\Amethyst Runner.exe");
                 process.WaitForExit(); 
             }
             catch
             {
-                MessageBox.Show("Radium Launcher n'a pas pu executer le fichier Amethyst Launcher.exe", "Une erreur inentendu c'est produite");
+                MessageBox.Show("Radium Runner n'a pas pu executer le fichier Amethyst Runner.exe", "Une erreur inentendu c'est produite");
             }
         }
 
@@ -67,7 +65,7 @@ namespace Radium_Launcher
             }
             catch
             {
-                MessageBox.Show("Radium Launcher n'a pas pu executer le fichier Modrinth App.exe", "Une erreur inentendu c'est produite");
+                MessageBox.Show("Radium Runner n'a pas pu executer le fichier Modrinth App.exe", "Une erreur inentendu c'est produite");
             }
         }
 
@@ -90,7 +88,7 @@ namespace Radium_Launcher
 
         private void Launch_launcher_Selected(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("À venir ...");
+            MessageBox.Show("À venir");
         }
     }
 }       

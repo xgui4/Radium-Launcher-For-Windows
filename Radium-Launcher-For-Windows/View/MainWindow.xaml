@@ -23,7 +23,7 @@
         </Image>
         <Image x:Name="Bedrock_Launcher" HorizontalAlignment="Center" Height="100" Margin="0,156,0,0" VerticalAlignment="Top" Width="100" Source="https://static.wikia.nocookie.net/minecraft_fr_gamepedia/images/e/ee/Bedrock.png/revision/latest?cb=20191102112159" Cursor="Hand" MouseLeftButtonDown="LaunchBedrockLauncher_Selected" Grid.Column="5" Stretch="Fill"/>
         <Label Content="Vanillia Launcher" HorizontalAlignment="Left" Margin="13,246,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1" Grid.ColumnSpan="4"/>
-        <Label Content="Launch Bedrock Launcher" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
+        <Label Content="Bedrock Launcher" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
         <Image x:Name="Amethyst_Launcher" HorizontalAlignment="Left" Height="100" Margin="351,154,0,0" VerticalAlignment="Top" Width="100" Source="../Assets/Amethyst.webp" Grid.Column="5" MouseLeftButtonDown="LaunchAmethyst_Selected" RenderTransformOrigin="-0.009,0.494"/>
         <Label Content="Amethyst Launcher" HorizontalAlignment="Left" Margin="351,250,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
         <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="37,156,0,0" VerticalAlignment="Top" Width="100" Source="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/a49f8e1b-3835-4ea1-a85b-118c6425ebc3/Modrinth_Dark_Logo.png" MouseLeftButtonDown="LaunchModrinth_Selected"/>
