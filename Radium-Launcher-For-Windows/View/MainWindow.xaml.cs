@@ -16,13 +16,15 @@ namespace Radium_Launcher
         {
             InitializeComponent();
             SystemManagement sys;
+            string version = (string)this.FindResource("Version");
+            Console.WriteLine(version);
         }
 
-        private void mcLauncherSelected(object sender, MouseButtonEventArgs e)
+        private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)
         {
             try
             {
-                var processInfo = new ProcessStartInfo("Scripts/launch.bat");
+                var processInfo = new ProcessStartInfo("../Scripts/launch.bat");
 
                 var process = Process.Start(processInfo);
 
@@ -37,13 +39,13 @@ namespace Radium_Launcher
 
         }
 
-        private void mcBedrockSelected(object sender, MouseButtonEventArgs e)
+        private void LaunchBedrockLauncher_Selected(object sender, MouseButtonEventArgs e)
         {
-            var launcher = new AppLauncher("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\"", "Bedrock Launcher");
+            var launcher = new Launcher("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\"", "Bedrock Launcher");
             launcher.LaunchWithElevatedPrivileged();
         }
 
-        private void launchAmethyst(object sender, MouseButtonEventArgs e)
+        private void LaunchAmethyst_Selected(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -56,7 +58,7 @@ namespace Radium_Launcher
             }
         }
 
-        private void launchModrinth(object sender, MouseButtonEventArgs e)
+        private void LaunchModrinth_Selected(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -69,21 +71,26 @@ namespace Radium_Launcher
             }
         }
 
-        private void openSetting(object sender, MouseButtonEventArgs e)
+        private void OpenSetting_Selected(object sender, MouseButtonEventArgs e)
         {
             Apps settingWindow = new Apps();
             settingWindow.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Connection_Selected(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void AboutBox_Selected(object sender, RoutedEventArgs e)
         {
             AboutBox about = new AboutBox();
             about.Show();
+        }
+
+        private void Launch_launcher_Selected(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("À venir ...");
         }
     }
 }       

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Radium_Launcher"
         mc:Ignorable="d"
-        Title="Radium Launcher : Windows Edition" Height="450" Width="800">
+        Title="Radium Launcher : Windows Edition" Height="500" Width="800">
     <Grid Background="#FF1E1E1E">
         <Image HorizontalAlignment="Center" Height="424" VerticalAlignment="Center" Width="800" OpacityMask="#FF1E1E1E"/>
         <Button x:Name="downloadMinecraft" Content="Acheter Minecraft" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Click">

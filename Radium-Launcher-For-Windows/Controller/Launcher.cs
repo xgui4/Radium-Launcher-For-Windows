@@ -7,25 +7,18 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Automation.Peers;
+using System.Windows; 
 
 namespace Radium_Launcher_For_Windows.Controller
 {
-    public class AppLauncher
+    public class Launcher
     {
-        public const string PYTHON_PATH = @"python.exe";
-
-        private string path;
-        private string url;
-        private string appTitle;
-        public AppLauncher(string path, string appTitle)
+        private readonly string path;
+        private readonly string appTitle;
+        public Launcher(string path, string appTitle = "")
         {
             this.path = path;
             this.appTitle = appTitle;
-        }
-
-        public AppLauncher(string url)
-        {
-            this.url = url;
         }
 
         /// <summary>
@@ -78,7 +71,7 @@ namespace Radium_Launcher_For_Windows.Controller
         /// </summary>
         public void OpenBrowser()
         {
-            var process = Process.Start("explorer", url);
+            var process = Process.Start("explorer", path);
             process.WaitForExit();
         }
 
