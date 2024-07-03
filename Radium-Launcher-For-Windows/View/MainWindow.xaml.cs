@@ -3,6 +3,7 @@ using Radium_Launcher_For_Windows.Controller;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
+using Windows.Devices.Sensors;
 using MessageBox = System.Windows.MessageBox;
 
 namespace Radium_Launcher
@@ -15,7 +16,21 @@ namespace Radium_Launcher
         public MainWindow()
         {
             InitializeComponent();
-            string comingSoon = (string)this.FindResource("Coming Soon");
+            string info = (string)this.FindResource("StartUp Message");
+            bool isDevMode = (bool)this.FindResource("Is Dev Version");
+            string titleName = (string)this.FindResource("Name");
+            string version = (string)this.FindResource("Version");
+            string releaseType = (string)this.FindResource("Release Type"); 
+
+            this.Title = titleName + " " +  version  + " " + releaseType;
+
+            if (isDevMode)
+            {                
+                MessageBox.Show(""); // en enlevant cette messagebox le fenêtre principale remplace la messagebox et la ferme
+                this.Hide();
+                MessageBox.Show(info);
+                this.Show();
+            }
         }
 
         private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)

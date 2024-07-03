@@ -8,7 +8,7 @@
     <sys:String x:Key="Creator">Xgui4 Studio</sys:String>
     <sys:String x:Key="Release Type">Dev</sys:String>
     <sys:Boolean x:Key="Is Dev Version">True</sys:Boolean>
-    
+
     <!-- Variable de langue variée -->
     <sys:String x:Key="Config">Configuration</sys:String>
     <sys:String x:Key="Login">Se connecter</sys:String>

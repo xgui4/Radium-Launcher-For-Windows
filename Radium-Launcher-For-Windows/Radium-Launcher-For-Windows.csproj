@@ -65,16 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AnimatedImage.Wpf" Version="1.0.4" />
-    <PackageReference Include="CmlLib.Core" Version="4.0.0-beta.1" />
-    <PackageReference Include="Doxygen" Version="1.8.14">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
-    <PackageReference Include="Npgsql" Version="8.0.3" />
-    <PackageReference Include="python" Version="3.13.0-b1" />
-    <PackageReference Include="pythonnet" Version="3.1.0-preview2024-05-07" /> 
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" /> 
   </ItemGroup>
 
   <ItemGroup>
