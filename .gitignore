@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# Sensitive content // DO NOT add Sensitive to git !
+*appsetting.json
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

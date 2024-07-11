@@ -1,5 +1,6 @@
 ﻿using Radium_Launcher_For_Windows;
 using Radium_Launcher_For_Windows.Controller;
+using Radium_Launcher_For_Windows.Server.Database;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
@@ -13,6 +14,7 @@ namespace Radium_Launcher
     /// </summary>
     public partial class MainWindow : Window
     {
+        string credential = ""; 
         public MainWindow()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace Radium_Launcher
             bool isDevMode = (bool)this.FindResource("Is Dev Version");
             string titleName = (string)this.FindResource("Name");
             string version = (string)this.FindResource("Version");
-            string releaseType = (string)this.FindResource("Release Type"); 
+            string releaseType = (string)this.FindResource("Release Type");
 
             this.Title = titleName + " " +  version  + " " + releaseType;
 
@@ -92,7 +94,8 @@ namespace Radium_Launcher
 
         private void Connection_Selected(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
+            //MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
+            var connect = new Connect();
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)

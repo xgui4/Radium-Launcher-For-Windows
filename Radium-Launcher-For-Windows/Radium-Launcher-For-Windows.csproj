@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <RootNamespace>Radium_Launcher_For_Windows</RootNamespace>
     <Nullable>enable</Nullable>
@@ -46,6 +46,7 @@
     <None Remove="mc.lnk" />
     <None Remove="Minecraft_missing_texture_block.svg.png" />
     <None Remove="radium.png" />
+    <None Remove="Server\appsetting.json" />
     <None Remove="SplashScreen1.png" />
   </ItemGroup>
 
@@ -65,7 +66,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" /> 
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
+    <PackageReference Include="MongoDB.Driver" Version="2.27.0" />
+    <PackageReference Include="MongoDB.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="SimpleModal.WPF" Version="1.0.0" /> 
   </ItemGroup>
 
   <ItemGroup>
@@ -80,6 +85,9 @@
     <Resource Include="Assets\radium.png" />
     <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
     <Resource Include="Assets\Capture d’écran 2024-06-28 233424.png" />
+    <Resource Include="Server\appsetting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
