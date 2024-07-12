@@ -93,9 +93,10 @@ namespace Radium_Launcher
         }
 
         private void Connection_Selected(object sender, RoutedEventArgs e)
-        {
-            //MessageBox.Show("La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant");
-            var connect = new Connect();
+        {;
+            var db = new Database();
+            var client = db.ConnectToMongoDB();
+           
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)

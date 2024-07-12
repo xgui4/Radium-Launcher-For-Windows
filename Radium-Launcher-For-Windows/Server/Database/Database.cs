@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MongoDB.Driver;
+using MongoDB.Bson;
+using Amazon.SecurityToken.Model;
+using System.Windows;
+using System.Linq.Expressions;
+
+namespace Radium_Launcher_For_Windows.Server.Database
+{
+    public class Database
+    {
+        private string connectionString = "";
+        private string database = "Radium_Launcher";
+        public Database() {
+            SetConnectionString(); 
+        }
+
+        /// <summary>
+        /// Se connecter à Mongo Atlas à l'aide de la clé de connexion
+        /// </summary>
+        /// <returns>Le Client de MongoDB</returns>
+        public MongoClient ConnectToMongoDB()
+        {
+            MongoClient client = null;
+            try
+            {
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    throw new MongoClientException(
+                        "Access Denied. Please verify that the connectionString is in the environment variable."
+                    );
+                }
+                var settings = MongoClientSettings.FromConnectionString(connectionString);
+                settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+                client = new MongoClient(settings);
+
+                // Test de la connexion
+                client.GetDatabase(this.database).RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                MessageBox.Show("Pinged your deployment. You successfully connected to MongoDB!");
+            }
+            catch (MongoClientException ex)
+            {
+                MessageBox.Show(ex.Message);
+                // Gérer l'exception spécifique à MongoClient
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                // Gérer toutes les autres exceptions
+            }
+            return client;
+        }
+
+
+        private void SetConnectionString() 
+        {
+            this.connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION", EnvironmentVariableTarget.User) ?? "";
+        }
+    }
+}
