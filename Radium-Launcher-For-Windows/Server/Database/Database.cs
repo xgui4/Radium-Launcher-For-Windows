@@ -34,9 +34,9 @@ namespace Radium_Launcher_For_Windows.Server.Database
                         "Access Denied. Please verify that the connectionString is in the environment variable."
                     );
                 }
-                var settings = MongoClientSettings.FromConnectionString(connectionString);
-                settings.ServerApi = new ServerApi(ServerApiVersion.V1);
-                client = new MongoClient(settings);
+                var credentials = MongoClientSettings.FromConnectionString(connectionString);
+                credentials.ServerApi = new ServerApi(ServerApiVersion.V1);
+                client = new MongoClient(credentials);
 
                 // Test de la connexion
                 client.GetDatabase(this.database).RunCommand<BsonDocument>(new BsonDocument("ping", 1));
@@ -47,12 +47,7 @@ namespace Radium_Launcher_For_Windows.Server.Database
                 MessageBox.Show(ex.Message);
                 // Gérer l'exception spécifique à MongoClient
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                // Gérer toutes les autres exceptions
-            }
-            return client;
+            return client; 
         }
 
 
