@@ -96,7 +96,8 @@ namespace Radium_Launcher
         {;
             var db = new Database();
             var client = db.ConnectToMongoDB();
-           
+            var genericUser = new Users(client);
+            Console.WriteLine(genericUser.FindDocument()); 
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)

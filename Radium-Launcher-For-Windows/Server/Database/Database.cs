@@ -8,6 +8,7 @@ using MongoDB.Bson;
 using Amazon.SecurityToken.Model;
 using System.Windows;
 using System.Linq.Expressions;
+using System.Security.Policy;
 
 namespace Radium_Launcher_For_Windows.Server.Database
 {
@@ -37,19 +38,19 @@ namespace Radium_Launcher_For_Windows.Server.Database
                 var credentials = MongoClientSettings.FromConnectionString(connectionString);
                 credentials.ServerApi = new ServerApi(ServerApiVersion.V1);
                 client = new MongoClient(credentials);
-
-                // Test de la connexion
-                client.GetDatabase(this.database).RunCommand<BsonDocument>(new BsonDocument("ping", 1));
-                MessageBox.Show("Pinged your deployment. You successfully connected to MongoDB!");
             }
             catch (MongoClientException ex)
             {
                 MessageBox.Show(ex.Message);
-                // Gérer l'exception spécifique à MongoClient
             }
             return client; 
         }
 
+        public void TestConnection(MongoClient client)
+        {
+            client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+            MessageBox.Show("Pinged your deployment. You successfully connected to MongoDB!");
+        }
 
         private void SetConnectionString() 
         {
