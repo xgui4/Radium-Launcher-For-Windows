@@ -1,10 +1,6 @@
-﻿using Radium_Launcher_For_Windows;
-using Radium_Launcher_For_Windows.Controller;
-using Radium_Launcher_For_Windows.Server.Database;
+﻿using Radium_Launcher_For_Windows.Controller;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,31 +11,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MessageBox = System.Windows.MessageBox;
 
-namespace Radium_Launcher
+namespace Radium_Launcher_For_Windows.View
 {
     /// <summary>
-    /// Le code behind qui fait fonctionner la page Apps. 
+    /// Interaction logic for Application.xaml
     /// </summary>
-    public partial class Apps : Window
+    public partial class Page2 : Window
     {
-        public Apps()
+        public Page2()
         {
             InitializeComponent();
-
         }
 
         private void Go_To_Website_Click(object sender, RoutedEventArgs e)
         {
-            Website website = new Website();
-            website.Show(); 
+            var website = new Website();
+            website.Show();
         }
-        
+
         private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)
         {
-            var launcher = new Runner("https://github.com/xgui4/Radium-Runner");
+            var launcher = new Runner("https://github.com/xgui4/Radium.Laucher");
 
             launcher.OpenBrowser();
         }
@@ -52,12 +47,11 @@ namespace Radium_Launcher
         {
             var launcher = new Runner("https://www.minecraft.net/download");
 
-            launcher.OpenBrowser(); 
+            launcher.OpenBrowser();
         }
 
         private void Go_To_Config_Click(object sender, RoutedEventArgs e)
         {
-            //File.Open("App.Config", FileMode.Open, FileAccess.Write, FileShare.None);
             MessageBox.Show("this is a future feature");
         }
 
@@ -65,7 +59,7 @@ namespace Radium_Launcher
         {
             var launcher = new Runner("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
 
-            launcher.OpenBrowser(); 
+            launcher.OpenBrowser();
         }
     }
 }

@@ -34,8 +34,8 @@ namespace Radium_Launcher_For_Windows.Server.Database
 
         public BsonDocument FindDocument()
         {
-            var collection = this.client.GetDatabase("sample_mflix").GetCollection<BsonDocument>("movies");
-            var filter = Builders<BsonDocument>.Filter.Eq("title", "Back to the Future");
+            var collection = this.client.GetDatabase("Radium_Launcher").GetCollection<BsonDocument>("Users");
+            var filter = Builders<BsonDocument>.Filter.Eq("user", "DefaultAdmin");
             var document = collection.Find(filter).First();
             return document;
         }

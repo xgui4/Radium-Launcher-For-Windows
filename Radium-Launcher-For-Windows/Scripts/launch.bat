@@ -1,1 +1,1 @@
-start "" "./Assets/mc.lnk"
+start "" "../Assets/mc.lnk"

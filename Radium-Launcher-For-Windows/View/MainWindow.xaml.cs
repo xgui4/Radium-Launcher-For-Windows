@@ -1,9 +1,13 @@
 ﻿using Radium_Launcher_For_Windows;
 using Radium_Launcher_For_Windows.Controller;
 using Radium_Launcher_For_Windows.Server.Database;
+using Radium_Launcher_For_Windows.View;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Navigation;
+using System.Windows.Xps.Packaging;
 using Windows.Devices.Sensors;
 using MessageBox = System.Windows.MessageBox;
 
@@ -28,7 +32,7 @@ namespace Radium_Launcher
 
             if (isDevMode)
             {                
-                MessageBox.Show(""); // en enlevant cette messagebox le fenêtre principale remplace la messagebox et la ferme
+                MessageBox.Show(""); // en enlevant cette messageBox le fenêtre principale remplace la messagebox et la ferme
                 this.Hide();
                 MessageBox.Show(info);
                 this.Show();
@@ -37,21 +41,8 @@ namespace Radium_Launcher
 
         private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)
         {
-            try
-            {
-                var processInfo = new ProcessStartInfo("../Scripts/launch.bat");
-
-                var process = Process.Start(processInfo);
-
-                process.Start();
-
-                process.WaitForExit();
-            }
-            catch
-            {
-                MessageBox.Show("Radium Runner n'a pas pu executer le fichier launch.bat", "Une erreur inentendu c'est produite");
-            }
-
+            var runner = new Runner("..\\Scripts\\launch.bat\\");
+            runner.LaunchApp();
         }
 
         private void LaunchBedrockLauncher_Selected(object sender, MouseButtonEventArgs e)
@@ -62,34 +53,19 @@ namespace Radium_Launcher
 
         private void LaunchAmethyst_Selected(object sender, MouseButtonEventArgs e)
         {
-            try
-            {
-                var process = Process.Start("C:\\Program Files\\Amethyst Runner\\Amethyst Runner.exe");
-                process.WaitForExit(); 
-            }
-            catch
-            {
-                MessageBox.Show("Radium Runner n'a pas pu executer le fichier Amethyst Runner.exe", "Une erreur inentendu c'est produite");
-            }
+            var runner = new Runner("C:\\Program Files\\Amethyst Launcher\\Amethyst Launcher.exe");
+            runner.LaunchApp();
         }
 
         private void LaunchModrinth_Selected(object sender, MouseButtonEventArgs e)
         {
-            try
-            {
-                var process = Process.Start("C:\\Program Files\\Modrinth App\\Modrinth App.exe");
-                process.WaitForExit();
-            }
-            catch
-            {
-                MessageBox.Show("Radium Runner n'a pas pu executer le fichier Modrinth App.exe", "Une erreur inentendu c'est produite");
-            }
+            var runner = new Runner("C:\\Program Files\\Modrinth App\\Modrinth App.exe");
+            runner.LaunchApp(); 
         }
 
         private void OpenSetting_Selected(object sender, MouseButtonEventArgs e)
         {
-            Apps settingWindow = new Apps();
-            settingWindow.Show();
+            NavigatorController.NavigateToPage2(this);
         }
 
         private void Connection_Selected(object sender, RoutedEventArgs e)

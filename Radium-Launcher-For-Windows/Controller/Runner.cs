@@ -33,7 +33,7 @@ namespace Radium_Launcher_For_Windows.Controller
             }
             catch
             {
-                MessageBox.Show($"Radium Runner n'a pas pu executer le fichier {name}", "Une erreur inattendu c'est produite");
+                MessageBox.Show($"Radium Launcher n'a pas pu executer le fichier {name}", "Une erreur inattendu c'est produite");
             }
         }
 
@@ -52,7 +52,7 @@ namespace Radium_Launcher_For_Windows.Controller
                 }
                 catch
                 {
-                    MessageBox.Show($"Radium Runner n'a pu executer le fichier " +
+                    MessageBox.Show($"Radium Launcher n'a pu executer le fichier " +
                         $"{name}. Avez-vous ouvert l'applis en mode administrateur?",
                         $"Une erreur c'est produite lors de l'éxecution de {name}");
                 }
