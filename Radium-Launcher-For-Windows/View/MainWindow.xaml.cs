@@ -1,6 +1,7 @@
 ﻿using Radium_Launcher_For_Windows;
 using Radium_Launcher_For_Windows.Controller;
 using Radium_Launcher_For_Windows.Server.Database;
+using System.Text.Json;
 using Radium_Launcher_For_Windows.View;
 using System.Diagnostics;
 using System.Windows;
@@ -10,6 +11,8 @@ using System.Windows.Navigation;
 using System.Windows.Xps.Packaging;
 using Windows.Devices.Sensors;
 using MessageBox = System.Windows.MessageBox;
+using MongoDB.Bson;
+using System.IO; 
 
 namespace Radium_Launcher
 {
@@ -69,11 +72,15 @@ namespace Radium_Launcher
         }
 
         private void Connection_Selected(object sender, RoutedEventArgs e)
-        {;
+        {
+            // Your existing code
             var db = new Database();
             var client = db.ConnectToMongoDB();
             var genericUser = new Users(client);
-            Console.WriteLine(genericUser.FindDocument()); 
+            var json = genericUser.FindDocument().ToJson();
+
+            // Write the JSON data to a file
+            File.WriteAllText("secret.json", json);
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)
