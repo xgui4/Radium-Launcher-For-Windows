@@ -13,30 +13,31 @@ namespace Radium_Launcher_For_Windows.Server.Database
 {
     public class Users
     {
-        private ObjectId _id { get; }
-        private string user { get; set; }
-        private string passwordSHA1 { get; set; }
-        private AccountType accountType { get; set; }
+        private ObjectId Id { get; }
+        private string User { get; set; }
+        private string PasswordSHA1 { get; set; }
+        private AccountType AccountType { get; set; }
 
-        private MongoClient client;
+        private MongoClient Client;
 
-
-        public Users(MongoClient client) { this.client = client; }
         public Users(ObjectId id, string user, string passwordSHA1, AccountType accountType, MongoClient client)
         {
-            this._id = id;
-            this.user = user;
-            this.passwordSHA1 = passwordSHA1;
-            this.accountType = accountType;
-
-            this.client = client;
+            Id = id;
+            User = user;
+            PasswordSHA1 = passwordSHA1;
+            AccountType = accountType;
+            Client = client;
         }
 
         public BsonDocument FindDocument()
         {
-            var collection = this.client.GetDatabase("Radium_Launcher").GetCollection<BsonDocument>("Users");
+            if (Client == null)
+            {
+                return null;
+            }
+            var collection = Client.GetDatabase("Radium_Launcher").GetCollection<BsonDocument>("Users");
             var filter = Builders<BsonDocument>.Filter.Eq("user", "DefaultAdmin");
-            var document = collection.Find(filter).First();
+            var document = collection.Find(filter).FirstOrDefault();
             return document;
         }
 
