@@ -108,7 +108,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Locales\French.xaml">
+    <Page Update="Locales\en.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Locales\fr.xaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
   </ItemGroup>

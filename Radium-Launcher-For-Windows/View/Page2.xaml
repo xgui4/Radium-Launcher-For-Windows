@@ -21,7 +21,7 @@
                 <ImageBrush ImageSource="../Assets/bedrock.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Go_To_Website" Content="Ouvrir le site dans une nouvelle fenêtre" HorizontalAlignment="Left" Margin="235,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Website_Click">
+        <Button x:Name="Go_To_Website" Content="{StaticResource Website}" HorizontalAlignment="Left" Margin="235,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="Go_To_Website_Click">
             <Button.Background>
                 <ImageBrush ImageSource="../Assets/radium.ico"/>
             </Button.Background>

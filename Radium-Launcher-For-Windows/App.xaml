@@ -5,6 +5,6 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Locales\French.xaml" />
+        <ResourceDictionary Source="Locales\en.xaml" />
     </Application.Resources>
 </Application>
