@@ -20,6 +20,7 @@ namespace Radium_Launcher_For_Windows.Server.Database
 
         private MongoClient Client;
 
+        public Users(MongoClient client) { }
         public Users(ObjectId id, string user, string passwordSHA1, AccountType accountType, MongoClient client)
         {
             Id = id;
