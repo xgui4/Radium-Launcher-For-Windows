@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Radium_Launcher_For_Windows.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Release_Type" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Dev</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0.0.0.2</Value>
+    </Setting>
+    <Setting Name="Is_Dev_Version" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="App_Name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Radium Launcher</Value>
+    </Setting>
+    <Setting Name="Creator" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Xgui4 Studio</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fr</Value>
+    </Setting>
+    <Setting Name="Asset_Pack" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Apps_Collection" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Webview" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

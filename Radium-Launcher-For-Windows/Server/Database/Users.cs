@@ -13,10 +13,10 @@ namespace Radium_Launcher_For_Windows.Server.Database
 {
     public class Users
     {
-        private ObjectId Id { get; }
-        private string User { get; set; }
-        private string PasswordSHA1 { get; set; }
-        private AccountType AccountType { get; set; }
+        private ObjectId Id;
+        private string User;
+        private string PasswordSHA1;
+        private AccountType AccountType;
 
         private MongoClient Client;
 

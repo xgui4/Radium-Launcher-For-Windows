@@ -5,12 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Radium_Launcher_For_Windows.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="Page2">
 
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="440" Margin="10,0,0,0" VerticalAlignment="Top" Width="790" Background="Black"/>
-        <Image HorizontalAlignment="Center" Height="424" VerticalAlignment="Center" Width="800" OpacityMask="#FF1E1E1E"/>
+        <Grid HorizontalAlignment="Left" Height="484" Margin="-13,0,0,0" VerticalAlignment="Center" Width="813" Background="#FF1E1E1E">
+            <Frame x:Name="Config" HorizontalAlignment="Left" Height="474" Margin="23,0,0,0" VerticalAlignment="Center" Width="790" NavigationUIVisibility="Hidden"/>
+        </Grid>
         <Button x:Name="downloadMinecraft" Content="{StaticResource Buy Minecraft}" HorizontalAlignment="Left" Margin="22,51,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Click">
             <Button.Background>
                 <ImageBrush ImageSource="../Assets/grass_dirt.png"/>
@@ -47,6 +48,6 @@
                 <ImageBrush ImageSource="../Assets/Minecraft_missing_texture_block.svg.png"/>
             </Button.Background>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="607,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" Width="183" FontSize="18" FontFamily="Segoe UI Variable Text" Text="{StaticResource Disclaimer}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="608,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="182" FontSize="18" FontFamily="Segoe UI Variable Text" Text="{StaticResource Disclaimer}" Height="340"/>
     </Grid>
 </Window>

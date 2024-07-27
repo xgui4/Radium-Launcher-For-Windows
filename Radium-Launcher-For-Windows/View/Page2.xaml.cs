@@ -52,7 +52,8 @@ namespace Radium_Launcher_For_Windows.View
 
         private void Go_To_Config_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("this is a future feature");
+            ConfigPanel configPanel = new ConfigPanel();
+            Config.Navigate(configPanel);
         }
 
         private void downloadMinecraft_Click(object sender, RoutedEventArgs e)
