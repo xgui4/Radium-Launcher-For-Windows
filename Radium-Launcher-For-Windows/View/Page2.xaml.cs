@@ -1,4 +1,5 @@
 ﻿using Radium_Launcher_For_Windows.Controller;
+using Radium_Launcher_For_Windows.Server.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using MongoDB.Bson;
 
 namespace Radium_Launcher_For_Windows.View
 {
@@ -43,6 +46,7 @@ namespace Radium_Launcher_For_Windows.View
         {
             MessageBox.Show("this is a future feature");
         }
+
         private void downloadMinecraft_launcher_Click(object sender, RoutedEventArgs e)
         {
             var launcher = new Runner("https://www.minecraft.net/download");
@@ -61,6 +65,24 @@ namespace Radium_Launcher_For_Windows.View
             var launcher = new Runner("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
 
             launcher.OpenBrowser();
+        }
+
+        private void Connection_Selected(object sender, RoutedEventArgs e)
+        {
+            // Your existing code
+            var db = new Database();
+            var client = db.ConnectToMongoDB();
+            var genericUser = new Users(client);
+            var json = genericUser.FindDocument().ToJson();
+
+            // Write the JSON data to a file
+            File.WriteAllText("secret.json", json);
+        }
+
+        private void AboutBox_Selected(object sender, RoutedEventArgs e)
+        {
+            AboutBox about = new AboutBox();
+            about.Show();
         }
     }
 }
