@@ -1,15 +1,19 @@
-﻿<Page x:Class="Radium_Launcher_For_Windows.View.ConfigPanel"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Radium_Launcher_For_Windows.View"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="Radium_Launcher_For_Windows.View.ConfigPanel"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="800"
       Title="Config">
 
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="500" Margin="598,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="202" Fill="Black"/>
-        <Label Content="Les paramètres sont a venir  !" HorizontalAlignment="Left" Height="58" Margin="617,232,0,0" VerticalAlignment="Top" Width="173" Foreground="White"/>
+        <Label Content="Config&#xD;&#xA;" HorizontalAlignment="Left" Margin="604,0,0,0" VerticalAlignment="Top" Foreground="White" Background="{x:Null}" Height="25"/>
+        <ui:ToggleSwitch x:Name="Dark_Mode_Toggle" Content="Dark Mode" HorizontalAlignment="Left" Margin="616,39,0,0" VerticalAlignment="Top" IsChecked="False" AutomationProperties.Name="Dark Mode Toggle"/>
+        <Label Content="Le reste a venir ! " HorizontalAlignment="Left" Margin="612,91,0,0" VerticalAlignment="Top" Foreground="White"/>
+
     </Grid>
 </Page>
