@@ -19,7 +19,7 @@
     <sys:String x:Key="Download Minecraft Launcher">Download Minecraft Launcher</sys:String>
     <sys:String x:Key="Coming Soon">Coming Soon</sys:String>
     <sys:String x:Key="StartUp Message">You are running a development version. These versions are not provided as .exe files and may be incomplete and may be unstable.</sys:String>
-    <sys:String x:Key="Login Not Availaible Message">The login function will undergo a complete rework. The function has therefore been removed for now.</sys:String>
+    <sys:String x:Key="Login Not Availaible Message">The connection function has been disabled by default for now, because it was not secure and is being set aside.</sys:String>
 
     <sys:String x:Key="Disclaimer">Disclaimer: This Minecraft launcher does not allow you to play Minecraft illegally (for free) and
 requires you to have purchased the game on PC. You must also have a Minecraft launcher installed on your system at the moment</sys:String>

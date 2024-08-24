@@ -20,9 +20,9 @@
     <sys:String x:Key="Coming Soon">À venir</sys:String>
     <sys:String x:Key="StartUp Message">Vous exécutez une version de developpement. Ces versions ne sont pas fournies en fichier .exe 
         et peuvent être incomplètes et peut être instable</sys:String>
-    <sys:String x:Key="Login Not Availaible Message">La fonction de connection va subir un re-work complet. La fonction a donc été enlever pour l'instant</sys:String>
+    <sys:String x:Key="Login Not Availaible Message">La fonction de connection a été désactiver par défaut, parcequ'elle n'était pas sécuritaire et est mis de côté.</sys:String>
 
-    <sys:String x:Key="Disclaimer">Disclaimer : Ce lanceur Minecraft ne permet pas de jouer illégalement à Minecraft (gratruitement) et
+    <sys:String x:Key="Disclaimer">Disclaimer : Ce lanceur Minecraft ne permet pas de jouer illégalement à Minecraft (gratuitement) et
     demande d'avoir acheter le jeux sur PC. Vous devez aussi avoir un lanceur Minecraft installer sur votre système pour le moment.</sys:String>
 
 </ResourceDictionary>

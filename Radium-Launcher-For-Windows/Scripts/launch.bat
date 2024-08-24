@@ -1,1 +1,0 @@
-start "" "../Assets/mc.lnk"

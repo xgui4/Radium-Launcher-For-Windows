@@ -1,18 +1,8 @@
 ﻿using Radium_Launcher_For_Windows;
 using Radium_Launcher_For_Windows.Controller;
-using Radium_Launcher_For_Windows.Server.Database;
-using System.Text.Json;
-using Radium_Launcher_For_Windows.View;
-using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Navigation;
-using System.Windows.Xps.Packaging;
-using Windows.Devices.Sensors;
 using MessageBox = System.Windows.MessageBox;
-using MongoDB.Bson;
-using System.IO; 
 
 namespace Radium_Launcher
 {
@@ -21,17 +11,20 @@ namespace Radium_Launcher
     /// </summary>
     public partial class MainWindow : Window
     {
-        string credential = ""; 
+        string credential = "";
+        string notAvaialble = "";
         public MainWindow()
         {
             InitializeComponent();
-            string info = (string)this.FindResource("StartUp Message");
-            bool isDevMode = (bool)this.FindResource("Is Dev Version");
-            string titleName = (string)this.FindResource("Name");
-            string version = (string)this.FindResource("Version");
-            string releaseType = (string)this.FindResource("Release Type");
+            Translator translator = new Translator(this);
+            string info = translator.TranslateToString("StartUp Message");
+            bool isDevMode = translator.TranslateToBool("Is Dev Version");
+            string titleName = translator.TranslateToString("Name");
+            string version = translator.TranslateToString("Version");
+            string releaseType = translator.TranslateToString("Release Type");
+            notAvaialble = translator.TranslateToString("Login Not Availaible Message");
 
-            this.Title = titleName + " " +  version  + " " + releaseType;
+            this.Title = $"{titleName} {version} {releaseType}";
 
             if (isDevMode)
             {                
@@ -73,14 +66,7 @@ namespace Radium_Launcher
 
         private void Connection_Selected(object sender, RoutedEventArgs e)
         {
-            // Your existing code
-            var db = new Database();
-            var client = db.ConnectToMongoDB();
-            var genericUser = new Users(client);
-            var json = genericUser.FindDocument().ToJson();
-
-            // Write the JSON data to a file
-            File.WriteAllText("secret.json", json);
+            MessageBox.Show(notAvaialble); 
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)
