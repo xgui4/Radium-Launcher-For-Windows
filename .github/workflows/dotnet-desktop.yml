@@ -1,4 +1,4 @@
-name: Build WPF Application
+name: Test and Deploy Radium Launcher
 
 on:
   push:
@@ -25,8 +25,17 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
+    - name: Execute unit tests
+      run: dotnet test ${{ env.Test_Project_Path }}
+
     - name: Build
       run: dotnet build --configuration Release
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./output
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Build Artifacts
+        path: ./output
