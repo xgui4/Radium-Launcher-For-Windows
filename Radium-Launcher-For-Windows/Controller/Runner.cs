@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Automation.Peers;
+﻿using System.Diagnostics;
 using System.Windows; 
 
 namespace Radium_Launcher_For_Windows.Controller
@@ -31,9 +23,9 @@ namespace Radium_Launcher_For_Windows.Controller
                 var process = Process.Start(path);
                 process.WaitForExit();
             }
-            catch
+            catch (Exception ex) 
             {
-                MessageBox.Show($"Radium Launcher n'a pas pu executer le fichier {name}", "Une erreur inattendu c'est produite");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -50,11 +42,9 @@ namespace Radium_Launcher_For_Windows.Controller
                     var process = Process.Start(path);
                     process.WaitForExit();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show($"Radium Launcher n'a pu executer le fichier " +
-                        $"{name}. Avez-vous ouvert l'applis en mode administrateur?",
-                        $"Une erreur c'est produite lors de l'éxecution de {name}");
+                    MessageBox.Show(ex.Message); 
                 }
             }
 
