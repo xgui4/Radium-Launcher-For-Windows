@@ -1,4 +1,4 @@
-name: Test and Deploy Radium Launcher
+name: Test and Build Radium Launcher
 
 on:
   push:
@@ -36,9 +36,3 @@ jobs:
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./output
-
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Build Artifacts
-        path: ./output

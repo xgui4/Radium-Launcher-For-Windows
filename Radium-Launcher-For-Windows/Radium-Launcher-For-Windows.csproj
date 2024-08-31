@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <RootNamespace>Radium_Launcher_For_Windows</RootNamespace>
     <Nullable>enable</Nullable>
@@ -14,12 +14,18 @@
     <ApplicationIcon>Assets\radium.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <SignAssembly>False</SignAssembly>
-    <FileVersion>0.0.0.2</FileVersion>
-    <AssemblyVersion>0.0.0.2</AssemblyVersion>
+    <FileVersion></FileVersion>
+    <AssemblyVersion></AssemblyVersion>
     <NeutralLanguage>fr-CA</NeutralLanguage>
-    <Title>Radium Launcher : Windows Edition</Title>
+    <Title>$(AssemblyName)</Title>
     <Version>0.0.0.2</Version>
     <UseWindowsForms>False</UseWindowsForms>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
