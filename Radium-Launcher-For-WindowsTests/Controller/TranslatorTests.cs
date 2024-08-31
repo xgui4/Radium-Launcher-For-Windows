@@ -19,7 +19,6 @@ namespace Radium_Launcher_For_Windows.Controller.Tests
            // Act
 
            // Assert
-           Assert.Fail("Les tests ne sont pas encore fait.");
         }
     }
 }

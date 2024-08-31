@@ -31,6 +31,9 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release
 
+    - name: Build
+      run: dotnet build --configuration Debug
+
     - name: Publish
       run: dotnet publish --configuration Release --output ./output
 
