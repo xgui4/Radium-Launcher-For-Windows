@@ -7,6 +7,9 @@ namespace Radium_Launcher_For_Windows
     /// </summary>
     public partial class AboutBox : Window
     {
+        /// <summary>
+        /// La fenêtre d'info About
+        /// </summary>
         public AboutBox()
         {
             InitializeComponent();

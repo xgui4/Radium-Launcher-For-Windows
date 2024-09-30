@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit.Sdk;
 
 namespace Radium_Launcher_For_Windows.Controller.Tests
 {

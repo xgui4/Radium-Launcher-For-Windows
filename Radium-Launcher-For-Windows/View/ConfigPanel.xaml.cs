@@ -7,6 +7,9 @@ namespace Radium_Launcher_For_Windows.View
     /// </summary>
     public partial class ConfigPanel : Page
     {
+        /// <summary>
+        /// Le paneau de configuration (en construction)
+        /// </summary>
         public ConfigPanel()
         {
             InitializeComponent();

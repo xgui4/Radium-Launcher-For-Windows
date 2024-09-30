@@ -11,8 +11,13 @@ namespace Radium_Launcher
     /// </summary>
     public partial class MainWindow : Window
     {
-        string credential = "";
-        string notAvaialble = "";
+        private readonly string credential = "";
+        private readonly string notAvaialble = "";
+        private readonly Runner appRunner = new Runner();
+
+        /// <summary>
+        /// La fenêtre principale de l'app
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -37,26 +42,34 @@ namespace Radium_Launcher
 
         private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)
         {
-            var runner = new Runner("..\\Scripts\\launch.bat\\");
-            runner.LaunchApp();
+            appRunner.SetPath("..\\\\Scripts\\\\launch.bat\\\\");
+            appRunner.SetName("Minecraft Launcher");
+            appRunner.LaunchApp();
+            appRunner.Clear(); 
         }
 
         private void LaunchBedrockLauncher_Selected(object sender, MouseButtonEventArgs e)
         {
-            var launcher = new Runner("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\"", "Bedrock Runner");
-            launcher.LaunchWithElevatedPrivileged();
+            appRunner.SetPath("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\\"); 
+            appRunner.SetName("Bedrock Launcher");
+            appRunner.LaunchWithElevatedPrivileged();
+            appRunner.Clear(); 
         }
 
         private void LaunchAmethyst_Selected(object sender, MouseButtonEventArgs e)
         {
-            var runner = new Runner("C:\\Program Files\\Amethyst Launcher\\Amethyst Launcher.exe");
-            runner.LaunchApp();
+            appRunner.SetPath("\"C:\\\\Program Files\\\\Amethyst Launcher\\\\Amethyst Launcher.exe");
+            appRunner.SetName("Amethys Launcher"); 
+            appRunner.LaunchApp();
+            appRunner.Clear();
         }
 
         private void LaunchModrinth_Selected(object sender, MouseButtonEventArgs e)
         {
-            var runner = new Runner("C:\\Program Files\\Modrinth App\\Modrinth App.exe");
-            runner.LaunchApp(); 
+            appRunner.SetPath("C:\\Program Files\\Modrinth App\\Modrinth App.exe");
+            appRunner.SetName("Modrinth App"); 
+            appRunner.LaunchApp(); 
+            appRunner.Clear();
         }
 
         private void OpenSetting_Selected(object sender, MouseButtonEventArgs e)

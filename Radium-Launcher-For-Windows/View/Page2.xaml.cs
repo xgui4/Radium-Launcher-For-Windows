@@ -11,8 +11,16 @@ namespace Radium_Launcher_For_Windows.View
     /// </summary>
     public partial class Page2 : Window
     {
+        private readonly string notAvaialble = "";
+        private readonly Runner webRunner = new Runner();
+
+        /// <summary>
+        /// La deuxième fenêtre
+        /// </summary>
         public Page2()
         {
+            Translator translator = new Translator(this);
+            notAvaialble = translator.TranslateToString("Login Not Availaible Message");
             InitializeComponent();
         }
 
@@ -24,9 +32,9 @@ namespace Radium_Launcher_For_Windows.View
 
         private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)
         {
-            var launcher = new Runner("https://github.com/xgui4/Radium.Laucher");
-
-            launcher.OpenBrowser();
+            webRunner.SetPath("https://github.com/xgui4/Radium.Laucher");
+            webRunner.OpenBrowser();
+            webRunner.Clear();
         }
 
         private void TBD_Click(object sender, RoutedEventArgs e)
@@ -36,9 +44,9 @@ namespace Radium_Launcher_For_Windows.View
 
         private void downloadMinecraft_launcher_Click(object sender, RoutedEventArgs e)
         {
-            var launcher = new Runner("https://www.minecraft.net/download");
-
-            launcher.OpenBrowser();
+            webRunner.SetPath("https://www.minecraft.net/download");
+            webRunner.OpenBrowser();
+            webRunner.Clear();
         }
 
         private void Go_To_Config_Click(object sender, RoutedEventArgs e)
@@ -49,21 +57,14 @@ namespace Radium_Launcher_For_Windows.View
 
         private void downloadMinecraft_Click(object sender, RoutedEventArgs e)
         {
-            var launcher = new Runner("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
-
-            launcher.OpenBrowser();
+            webRunner.SetPath("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
+            webRunner.OpenBrowser();
+            webRunner.Clear();
         }
 
         private void Connection_Selected(object sender, RoutedEventArgs e)
         {
-            // Your existing code
-            var db = new Database();
-            var client = db.ConnectToMongoDB();
-            var genericUser = new Users(client);
-            var json = genericUser.FindDocument().ToJson();
-
-            // Write the JSON data to a file
-            File.WriteAllText("secret.json", json);
+            MessageBox.Show(notAvaialble);
         }
 
         private void AboutBox_Selected(object sender, RoutedEventArgs e)

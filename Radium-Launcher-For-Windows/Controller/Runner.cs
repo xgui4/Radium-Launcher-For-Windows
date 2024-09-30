@@ -3,14 +3,44 @@ using System.Windows;
 
 namespace Radium_Launcher_For_Windows.Controller
 {
+    /// <summary>
+    /// Permet de lancer un app ou un lien URL
+    /// </summary>
     public class Runner
     {
-        private readonly string path;
-        private readonly string name;
-        public Runner(string path, string name = "")
+        /// <summary>
+        /// Le chemin vers l'exécutable ou l'URL
+        /// </summary>
+        public string Path { private get; set; } = ""; 
+
+        /// <summary>
+        /// Le nom du programme (valeur par défaut = "")
+        /// </summary>
+        public string Name { private get; set; } = ""; 
+
+        /// <summary>
+        /// Permet de crée un lanceur. 
+        /// </summary>
+        public Runner()
         {
-            this.path = path;
-            this.name = name;
+        }
+
+        /// <summary>
+        /// Permet de paramètré 
+        /// </summary>
+        /// <param Name="path"></param>
+        public void SetPath(string path)
+        {
+            this.Path = path;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param Name="name"></param>
+        public void SetName(string name)
+        {
+            this.Name = name;
         }
 
         /// <summary>
@@ -20,7 +50,7 @@ namespace Radium_Launcher_For_Windows.Controller
         {
             try
             {
-                var process = Process.Start(path);
+                var process = Process.Start(Path);
                 process.WaitForExit();
             }
             catch (Exception ex) 
@@ -39,7 +69,7 @@ namespace Radium_Launcher_For_Windows.Controller
             {
                 try
                 {
-                    var process = Process.Start(path);
+                    var process = Process.Start(Path);
                     process.WaitForExit();
                 }
                 catch (Exception ex)
@@ -64,11 +94,18 @@ namespace Radium_Launcher_For_Windows.Controller
         /// </summary>
         public void OpenBrowser()
         {
-            var process = Process.Start("explorer", path);
+            var process = Process.Start("explorer", Path);
             process.WaitForExit();
         }
-
-
+        
+        /// <summary>
+        /// Remettre la path et le name dans leur valeur par défaut.
+        /// </summary>
+        public void Clear()
+        {
+            Path = "";
+            Name = ""; 
+        }
 
     }
 }

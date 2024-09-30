@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Radium_Launcher_For_Windows"
         xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="Radium_Launcher_For_Windows.AboutBox"
         mc:Ignorable="d"
-        Title="À propos de : Radiums Launcher" Height="450" Width="600">
+        Title="À propos de : Radiums Launcher" Height="500" Width="650">
     <Grid Margin="-6,0,6,0">
         <Grid.Background>
             <ImageBrush/>
