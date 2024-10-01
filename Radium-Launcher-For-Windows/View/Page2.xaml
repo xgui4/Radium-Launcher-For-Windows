@@ -20,12 +20,12 @@
             <TextBlock HorizontalAlignment="Left" Height="40" Margin="668,434,0,0" TextWrapping="Wrap" Text="{StaticResource Version}" VerticalAlignment="Top" Width="170" FontSize="20" Foreground="White"/>
             <Frame x:Name="Config" HorizontalAlignment="Center" Height="474" VerticalAlignment="Center" Width="813" NavigationUIVisibility="Hidden" Foreground="{x:Null}"/>
         </Grid>
-        <Button x:Name="downloadMinecraft" Content="{StaticResource Buy Minecraft}" HorizontalAlignment="Left" Margin="22,109,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_Click">
+        <Button x:Name="DownloadMinecraft" Content="{StaticResource Buy Minecraft}" HorizontalAlignment="Left" Margin="22,109,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="DownloadMinecraft_Click">
             <Button.Background>
                 <ImageBrush ImageSource="../Assets/grass_dirt.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="downloadMinecraft_launcher" Content="{StaticResource Download Minecraft Launcher}" HorizontalAlignment="Left" Margin="22,287,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="downloadMinecraft_launcher_Click">
+        <Button x:Name="DownloadMinecraft_launcher" Content="{StaticResource Download Minecraft Launcher}" HorizontalAlignment="Left" Margin="22,287,0,0" VerticalAlignment="Top" Height="129" Width="153" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="15" FontFamily="Segoe UI Variable Text" Cursor="ArrowCD" Click="DownloadMinecraft_launcher_Click">
             <Button.Background>
                 <ImageBrush ImageSource="../Assets/bedrock.png"/>
             </Button.Background>

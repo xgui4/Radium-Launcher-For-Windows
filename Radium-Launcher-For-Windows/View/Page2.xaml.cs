@@ -42,7 +42,7 @@ namespace Radium_Launcher_For_Windows.View
             MessageBox.Show("this is a future feature");
         }
 
-        private void downloadMinecraft_launcher_Click(object sender, RoutedEventArgs e)
+        private void DownloadMinecraft_launcher_Click(object sender, RoutedEventArgs e)
         {
             webRunner.SetPath("https://www.minecraft.net/download");
             webRunner.OpenBrowser();
@@ -55,7 +55,7 @@ namespace Radium_Launcher_For_Windows.View
             Config.Navigate(configPanel);
         }
 
-        private void downloadMinecraft_Click(object sender, RoutedEventArgs e)
+        private void DownloadMinecraft_Click(object sender, RoutedEventArgs e)
         {
             webRunner.SetPath("https://www.minecraft.net/fr-ca/store/minecraft-java-bedrock-edition-pc");
             webRunner.OpenBrowser();

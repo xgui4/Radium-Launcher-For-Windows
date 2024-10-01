@@ -20,7 +20,7 @@ namespace Radium_Launcher_For_Windows.Controller.Tests
            // Act
 
            // Assert
-           Assert.Fail("Les tests ne sont pas encore fait.");
+           Assert.Fail("Le code doit être reformaté et la structure revue pour les tests. Veuillez l'ignoré.");
         }
     }
 }
