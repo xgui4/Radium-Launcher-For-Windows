@@ -1,9 +1,10 @@
 ﻿<Application x:Class="Radium_Launcher.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Radium_Launcher"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:Radium_Launcher" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Locales\fr.xaml" />
     </Application.Resources>
 </Application>

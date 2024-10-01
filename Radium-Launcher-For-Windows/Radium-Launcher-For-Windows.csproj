@@ -1,8 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Globals">
+    <WebView2LoaderPreference>Dynamic</WebView2LoaderPreference>
+  </PropertyGroup>
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <RootNamespace>Radium_Launcher_For_Windows</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -10,21 +14,40 @@
     <ApplicationIcon>Assets\radium.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <SignAssembly>False</SignAssembly>
-    <FileVersion>0.0.11</FileVersion>
-    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <FileVersion></FileVersion>
+    <AssemblyVersion></AssemblyVersion>
     <NeutralLanguage>fr-CA</NeutralLanguage>
-    <Title>Radium Launcher For Windows</Title>
-    <Version>0.0.1</Version>
-    <UseWindowsForms>True</UseWindowsForms>
+    <Title>$(AssemblyName)</Title>
+    <Version>0.0.0.2</Version>
+    <UseWindowsForms>False</UseWindowsForms>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Amethyst.webp" />
+    <None Remove="Apps.png" />
+    <None Remove="Assets\Apps.png" />
+    <None Remove="Assets\Info.png" />
     <None Remove="bedrock.png" />
     <None Remove="bg.png" />
+    <None Remove="Capture d’écran 2024-06-28 233424.png" />
     <None Remove="Cog.gif" />
     <None Remove="Cog.webp" />
     <None Remove="grass_dirt.png" />
+    <None Remove="Info.png" />
     <None Remove="launch.bat" />
     <None Remove="mc.lnk" />
     <None Remove="Minecraft_missing_texture_block.svg.png" />
@@ -33,28 +56,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Apps.png" />
+    <Resource Include="Assets\Info.png" />
     <Resource Include="Assets\radium.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Scripts\launch.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Assets\mc.lnk">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AnimatedImage.Wpf" Version="1.0.4" />
-    <PackageReference Include="CmlLib.Core" Version="4.0.0-beta.1" />
-    <PackageReference Include="Doxygen" Version="1.8.14">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Npgsql" Version="8.0.3" />
-    <PackageReference Include="python" Version="3.13.0-b1" />
-    <PackageReference Include="pythonnet" Version="3.1.0-preview2024-05-07" /> 
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
+    <PackageReference Include="MongoDB.Driver" Version="2.28.0" />
+    <PackageReference Include="MongoDB.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="WPF-UI" Version="3.0.5" /> 
   </ItemGroup>
 
   <ItemGroup>
@@ -63,14 +81,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\bg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Assets\Cog.gif" />
     <Resource Include="Assets\Cog.webp" />
     <Resource Include="Assets\grass_dirt.png" />
     <Resource Include="Assets\radium.png" />
     <Resource Include="Assets\Minecraft_missing_texture_block.svg.png" />
+    <Resource Include="Assets\Capture d’écran 2024-06-28 233424.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -85,6 +101,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>connect.py</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -92,6 +113,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>connect.Designer.cs</LastGenOutput>
     </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Locales\en.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Locales\fr.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>

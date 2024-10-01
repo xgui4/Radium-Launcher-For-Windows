@@ -1,0 +1,38 @@
+name: Test and Build Radium Launcher
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Execute unit tests
+      run: dotnet test ${{ env.Test_Project_Path }}
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Build
+      run: dotnet build --configuration Debug
+
+    - name: Publish
+      run: dotnet publish --configuration Release --output ./output
