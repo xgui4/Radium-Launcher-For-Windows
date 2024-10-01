@@ -7,6 +7,9 @@ namespace Radium_Launcher_For_Windows
     /// </summary>
     public partial class Website : Window
     {
+        /// <summary>
+        /// La fenêtre du site de Radium Launcher
+        /// </summary>
         public Website()
         {
             InitializeComponent();
