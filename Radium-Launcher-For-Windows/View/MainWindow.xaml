@@ -18,15 +18,11 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="109*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Center" Height="100" Margin="0,156,0,0" VerticalAlignment="Top" Width="100" Source="\Assets\Capture d’écran 2024-06-28 233424.png" MouseLeftButtonDown="LaunchMinecraftLauncherMS_Selected" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="4">
+        <Image x:Name="Vanillia_Launcher" HorizontalAlignment="Left" Height="100" Margin="63,154,0,0" VerticalAlignment="Top" Width="100" Source="\Assets\Capture d’écran 2024-06-28 233424.png" MouseLeftButtonDown="LaunchMinecraftLauncherMS_Selected" Cursor="Hand" Grid.Column="4" Grid.ColumnSpan="2" RenderTransformOrigin="1.788,0.46">
         </Image>
-        <Image x:Name="Bedrock_Launcher" HorizontalAlignment="Center" Height="100" Margin="0,156,0,0" VerticalAlignment="Top" Width="100" Source="https://static.wikia.nocookie.net/minecraft_fr_gamepedia/images/e/ee/Bedrock.png/revision/latest?cb=20191102112159" Cursor="Hand" MouseLeftButtonDown="LaunchBedrockLauncher_Selected" Grid.Column="5" Stretch="Fill"/>
-        <Label Content="Vanillia Launcher" HorizontalAlignment="Left" Margin="13,246,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="1" Grid.ColumnSpan="4"/>
-        <Label Content="Bedrock Launcher" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
-        <Image x:Name="Amethyst_Launcher" HorizontalAlignment="Left" Height="100" Margin="351,154,0,0" VerticalAlignment="Top" Width="100" Source="../Assets/Amethyst.webp" Grid.Column="5" MouseLeftButtonDown="LaunchAmethyst_Selected" RenderTransformOrigin="-0.009,0.494"/>
-        <Label Content="Amethyst Launcher" HorizontalAlignment="Left" Margin="351,250,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="5"/>
-        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="37,156,0,0" VerticalAlignment="Top" Width="100" Source="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/a49f8e1b-3835-4ea1-a85b-118c6425ebc3/Modrinth_Dark_Logo.png" MouseLeftButtonDown="LaunchModrinth_Selected"/>
-        <Label Grid.Column="5" Content="Modrinth" HorizontalAlignment="Left" Margin="57,254,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.5,0.5" Foreground="White"></Label>
+        <Label Content="Vanillia Launcher" HorizontalAlignment="Left" Margin="44,243,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Image Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="202,154,0,0" VerticalAlignment="Top" Width="100" Source="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/a49f8e1b-3835-4ea1-a85b-118c6425ebc3/Modrinth_Dark_Logo.png" MouseLeftButtonDown="LaunchModrinth_Selected"/>
+        <Label Grid.Column="5" Content="Modrinth" HorizontalAlignment="Left" Margin="222,254,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.956,0.514" Foreground="White"></Label>
         <Image Grid.Column="6" HorizontalAlignment="Left" Height="55" Margin="10,1,0,0" VerticalAlignment="Top" Width="68" MouseLeftButtonDown="OpenSetting_Selected" Source="../Assets/Apps.png" Grid.ColumnSpan="3" RenderTransformOrigin="0.306,0.466" OpacityMask="White"/>
         <Button Grid.Column="8" Content="{StaticResource Login}" HorizontalAlignment="Left" Margin="37,18,0,0" VerticalAlignment="Top" Click="Connection_Selected"/>
         <Button Grid.Column="5" Content="" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="68" Click="AboutBox_Selected" Margin="403,9,0,0">
@@ -36,6 +32,6 @@
         </Button>
         <TextBlock Grid.Column="5" HorizontalAlignment="Left" Height="40" Margin="162,434,0,0" TextWrapping="Wrap" Text="{StaticResource Name}" VerticalAlignment="Top" Width="361" FontSize="20" Foreground="White" Grid.ColumnSpan="3"/>
         <TextBlock Grid.Column="7" HorizontalAlignment="Left" Height="40" Margin="10,434,0,0" TextWrapping="Wrap" Text="{StaticResource Version}" VerticalAlignment="Top" Width="170" FontSize="20" Foreground="White" Grid.ColumnSpan="2"/>
-        <Image x:Name="Other_Launcher" Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="10,156,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Source="https://mighty-basketball-fd4aeed960.media.strapiapp.com/62e3888add6d204e844bff40_6409840b12f66a80af2f76ec_COH_Jm7_P0lu8_CEAE_26cea0dadd.jpeg" MouseLeftButtonDown="Launch_launcher_Selected"/>
+        <Image x:Name="Other_Launcher" Grid.Column="5" HorizontalAlignment="Left" Height="100" Margin="403,160,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="3" Source="https://mighty-basketball-fd4aeed960.media.strapiapp.com/62e3888add6d204e844bff40_6409840b12f66a80af2f76ec_COH_Jm7_P0lu8_CEAE_26cea0dadd.jpeg" MouseLeftButtonDown="Launch_launcher_Selected"/>
     </Grid>
 </Window>

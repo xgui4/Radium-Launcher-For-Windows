@@ -1,8 +1,5 @@
 ﻿using Radium_Launcher_For_Windows.Controller;
-using Radium_Launcher_For_Windows.Server.Database;
 using System.Windows;
-using System.IO;
-using MongoDB.Bson;
 
 namespace Radium_Launcher_For_Windows.View
 {
@@ -32,7 +29,7 @@ namespace Radium_Launcher_For_Windows.View
 
         private void Go_To_Source_Code_Click(object sender, RoutedEventArgs e)
         {
-            webRunner.SetPath("https://github.com/xgui4/Radium.Laucher");
+            webRunner.SetPath("https://github.com/xgui4/Radium.Launcher");
             webRunner.OpenBrowser();
             webRunner.Clear();
         }

@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "Release-Preview", "dev"]
 
 jobs:
   build:
@@ -33,6 +33,3 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Debug
-
-    - name: Publish
-      run: dotnet publish --configuration Release --output ./output

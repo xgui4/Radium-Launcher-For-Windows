@@ -2,9 +2,7 @@ name: Build and Publish Radium Launcher
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: []
+    branches: [ "main", "Release-Preview"]
 
 jobs:
   build:

@@ -11,7 +11,6 @@ namespace Radium_Launcher
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly string credential = "";
         private readonly string notAvaialble = "";
         private readonly Runner appRunner = new Runner();
 
@@ -42,28 +41,11 @@ namespace Radium_Launcher
 
         private void LaunchMinecraftLauncherMS_Selected(object sender, MouseButtonEventArgs e)
         {
-            appRunner.SetPath("..\\\\Scripts\\\\launch.bat\\\\");
+            appRunner.SetPath("Assets\\mc.lnk");
             appRunner.SetName("Minecraft Launcher");
-            appRunner.LaunchApp();
+            appRunner.OpenBrowser(); // temporaire
             appRunner.Clear(); 
         }
-
-        private void LaunchBedrockLauncher_Selected(object sender, MouseButtonEventArgs e)
-        {
-            appRunner.SetPath("C:\\Program Files\\BedrockLauncher\\app\\BedrockLauncher.exe\\"); 
-            appRunner.SetName("Bedrock Launcher");
-            appRunner.LaunchWithElevatedPrivileged();
-            appRunner.Clear(); 
-        }
-
-        private void LaunchAmethyst_Selected(object sender, MouseButtonEventArgs e)
-        {
-            appRunner.SetPath("\"C:\\\\Program Files\\\\Amethyst Launcher\\\\Amethyst Launcher.exe");
-            appRunner.SetName("Amethys Launcher"); 
-            appRunner.LaunchApp();
-            appRunner.Clear();
-        }
-
         private void LaunchModrinth_Selected(object sender, MouseButtonEventArgs e)
         {
             appRunner.SetPath("C:\\Program Files\\Modrinth App\\Modrinth App.exe");
@@ -71,7 +53,7 @@ namespace Radium_Launcher
             appRunner.LaunchApp(); 
             appRunner.Clear();
         }
-
+        
         private void OpenSetting_Selected(object sender, MouseButtonEventArgs e)
         {
             NavigatorController.NavigateToPage2(this);
