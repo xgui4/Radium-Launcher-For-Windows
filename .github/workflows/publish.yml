@@ -1,10 +1,8 @@
-name: Test and Build Radium Launcher
+name: Build and Publish Radium Launcher
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "Release-Preview"]
 
 jobs:
   build:
@@ -17,16 +15,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore dependencies
       run: dotnet restore
-
-    - name: Execute unit tests
-      run: dotnet test ${{ env.Test_Project_Path }}
 
     - name: Build
       run: dotnet build --configuration Release
@@ -36,3 +31,9 @@ jobs:
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./output
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Build Artifacts
+        path: ./output

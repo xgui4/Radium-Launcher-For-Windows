@@ -6,7 +6,7 @@
     <sys:String x:Key="Version">Version 0.0.0.2</sys:String>
     <sys:String x:Key="Name">Radium Launcher : Windows Edition</sys:String>
     <sys:String x:Key="Creator">Xgui4 Studio</sys:String>
-    <sys:String x:Key="Release Type">Dev</sys:String>
+    <sys:String x:Key="Release Type">Dotnet 9 Experimentation</sys:String>
     <sys:Boolean x:Key="Is Dev Version">True</sys:Boolean>
 
     <!-- Variable de langue variée -->
@@ -22,6 +22,6 @@
     <sys:String x:Key="Login Not Availaible Message">The connection function has been disabled by default for now, because it was not secure and is being set aside.</sys:String>
     <sys:String x:Key="Need Admin">The application must restart with elevated privileges to perform this action. Please try again.</sys:String>
     <sys:String x:Key="Disclaimer">Disclaimer: This Minecraft launcher does not allow you to play Minecraft illegally (for free) and
-requires you to have purchased the game on PC. You must also have a Minecraft launcher installed on your system at the moment</sys:String>
+    requires you to have purchased the game on PC. You must also have a Minecraft launcher installed on your system at the moment</sys:String>
 
 </ResourceDictionary>
